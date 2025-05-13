@@ -7,8 +7,8 @@ st.set_page_config(page_title="Breast Cancer Prediction", layout="wide")
 
 # Load model and scaler
 try:
-    model = joblib.load('rf_model.joblib')
-    scaler = joblib.load('scaler.joblib')
+    model = joblib.load('../models/rf_model.joblib')
+    scaler = joblib.load('../models/scaler.joblib')
 except FileNotFoundError:
     st.error("Model or scaler file not found. Please run train_model.py first.")
     st.stop()
